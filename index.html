@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Officer (Cash) Exam — Job ID 25103</title>
+<meta name="description" content="Officer (Cash) 10th Grade, Job ID 25103 — Group Ratio & Viva Analysis">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Officer (Cash) Exam — Job ID 25103</h1>
+  <div class="top">
+    <span class="pill">👁 Visitors <b id="vis">—</b></span>
+    <button class="pill" id="ratioBtn">Ratio কি? →</button>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="stat b"><b id="sW">0</b><span>Total Written</span></div>
+  <div class="stat"><b id="sV">0</b><span>Total Viva</span></div>
+  <div class="stat g"><b id="sQ">0</b><span>Qualified for Viva</span></div>
+  <div class="stat r"><b id="sN">0</b><span>Not Qualified</span></div>
+</section>
+
+<div class="legend">
+  <span><i class="dot" style="background:var(--ok)"></i>Qualified for Viva</span>
+  <span><i class="dot" style="background:var(--no)"></i>Not Selected for Viva</span>
+</div>
+
+<section class="card">
+  <h2>Search</h2>
+  <p class="hint">Type a roll number and press Enter or click Search. Green cards = Qualified for Viva.</p>
+  <div class="sbar"><input id="q" inputmode="numeric" maxlength="6" placeholder="e.g. 500112"><button class="go" id="go">Search</button></div>
+  <div id="res"></div>
+</section>
+
+<section class="card">
+  <h2>Viva Schedule</h2>
+  <p class="hint">Tap a slot to see group range, ratio & roll numbers.</p>
+  <div class="slots" id="slots"></div>
+</section>
+
+<section class="card">
+  <h2>All Written Exam Roll Numbers</h2>
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-f="all">All</button>
+    <button class="tab" data-f="v">Qualified for Viva</button>
+    <button class="tab" data-f="n">Not Qualified</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <button class="pill more" id="more">Load more</button>
+</section>
+
+<section class="card">
+  <h2>Group Ratio Distribution Analysis</h2>
+  <p class="hint">How many viva groups fall in each group competition ratio range</p>
+  <p class="hint">Total viva candidates: <b id="rt">—</b> · All group bars sum to this</p>
+  <div id="bars"></div>
+</section>
+
+<footer>
+  Source: Bangladesh Bank BSCS Notices 244/2026 &amp; 350/2026 · Unofficial analysis — always verify with the official notice.
+</footer>
+</div>
+
+<div class="modal" id="modal"><div class="box"><button class="x" id="mx">×</button><div id="mb"></div></div></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
